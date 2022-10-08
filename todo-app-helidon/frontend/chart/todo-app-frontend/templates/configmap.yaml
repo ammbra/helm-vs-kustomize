@@ -1,0 +1,9 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ include "todo-app-frontend.fullname" . }}
+data:
+  env: {{ .Values.configmap.env }}
+  services: |-
+    zipkin.host: {{ .Values.configmap.zipkin }}
+    backend.endpoint: {{ .Values.configmap.backend }}

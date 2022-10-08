@@ -1,0 +1,10 @@
+rbac:
+  create: true
+
+controller:
+  service:
+    annotations:
+      service.beta.kubernetes.io.oci-load-balancer-protocol: TCP
+      service.beta.kubernetes.io.oci-load-balancer-shape: flexible
+      service.beta.kubernetes.io.oci-load-balancer-shape-flex-min: 10
+      service.beta.kubernetes.io.oci-load-balancer-shape-flex-max: 20

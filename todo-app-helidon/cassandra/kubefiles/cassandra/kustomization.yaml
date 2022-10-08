@@ -1,0 +1,5 @@
+commonLabels:
+  app: cassandra
+resources:
+  - deployment.yaml
+  - service.yaml
