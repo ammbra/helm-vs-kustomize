@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: helidon-examples-todo-cassandra
+  labels:
+    app.kubernetes.io/name: helidon-examples-todo-cassandra
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: helidon-examples-todo-cassandra
+  ports:
+    - name: http-prod
+      port: 9042
+      targetPort: 9042

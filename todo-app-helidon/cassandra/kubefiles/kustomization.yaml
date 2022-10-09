@@ -1,5 +1,6 @@
 commonLabels:
   app: infra
-bases:
-  - ./zipkin
-  - ./cassandra
+namespace: dev
+resources:
+  - ./zipkin/base
+  - ./cassandra/base
