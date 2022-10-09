@@ -4,6 +4,6 @@ helmChartInflationGenerator:
     chartRepoUrl: https://kubernetes.github.io/ingress-nginx
     chartVersion: 4.1.1
     releaseName: nginx-release
-    releaseNamespace: default
+    releaseNamespace: ingress-nginx
     # override with these custom values
     values: values.oci.yaml
