@@ -1,3 +1,6 @@
+namespace: ingress-nginx
+
+
 # Ingress NGINX helm chart
 helmChartInflationGenerator:
   - chartName: ingress-nginx
@@ -7,3 +10,4 @@ helmChartInflationGenerator:
     releaseNamespace: ingress-nginx
     # override with these custom values
     values: values.oci.yaml
+
