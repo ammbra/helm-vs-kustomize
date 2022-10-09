@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: helidon-examples-todo-frontend
+  namespace: default
+data:
+  env: k8s
+  services: |-
+    zipkin.host: zipkin
+    backend.endpoint: http://helidon-examples-todo-backend:8854

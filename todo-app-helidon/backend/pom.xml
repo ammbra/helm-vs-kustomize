@@ -100,17 +100,7 @@
         </dependency>
         <dependency>
             <groupId>io.dekorate</groupId>
-            <artifactId>knative-annotations</artifactId>
-            <version>${dekorate-annotations.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dekorate</groupId>
             <artifactId>helm-annotations</artifactId>
-            <version>${dekorate-annotations.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dekorate</groupId>
-            <artifactId>tekton-annotations</artifactId>
             <version>${dekorate-annotations.version}</version>
         </dependency>
     </dependencies>

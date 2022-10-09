@@ -23,9 +23,7 @@ import java.util.logging.LogManager;
 import io.dekorate.docker.annotation.DockerBuild;
 import io.dekorate.helm.annotation.HelmChart;
 import io.dekorate.helm.annotation.ValueReference;
-import io.dekorate.knative.annotation.KnativeApplication;
 import io.dekorate.kubernetes.annotation.*;
-import io.dekorate.tekton.annotation.TektonApplication;
 import io.helidon.config.Config;
 import io.helidon.microprofile.server.Server;
 
@@ -40,11 +38,7 @@ import static io.helidon.config.ConfigSources.file;
 @KubernetesApplication( ports = @Port(name = "http", containerPort = 8854, hostPort = 8854),
         mounts = @Mount(name = "config-volume", path = "/conf"),
         configMapVolumes = @ConfigMapVolume(configMapName = "helidon-examples-todo-backend", volumeName = "config-volume"))
-@KnativeApplication(name = "ktodo-app-backend", ports = @Port(name = "http", containerPort = 8854),
-        mounts = @Mount(name = "config-volume", path = "/conf"),
-        configMapVolumes = @ConfigMapVolume(configMapName = "helidon-examples-todo-backend", volumeName = "config-volume"))
 @HelmChart(name = "htodo-app-backend", values = @ValueReference(property = "name", paths = "metadata.name", value = "htodo-app-backend"))
-@TektonApplication(sourceWorkspaceClaim = @PersistentVolumeClaim(name = "claim-mine", matchLabels = @Label(key = "foo", value = "bar")))
 public final class Main {
 
     /**
