@@ -6,4 +6,4 @@ data:
   env: {{ .Values.configmap.env }}
   services: |-
     zipkin.host: {{ .Values.configmap.zipkin }}
-    backend.endpoint: {{ .Values.configmap.backend }}
+    backend.endpoint: {{ .Values.global.configmap.backend }}
